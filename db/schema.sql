@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS mars_db;
+CREATE DATABASE mars_db;
