@@ -12,7 +12,8 @@ Base.hasMany(Martian, {
 
 //Martian belongsTo ONE Base
 Martian.belongsTo(Base, {
-    foreignKey: 'base_id'
+    foreignKey: 'base_id',
+    onDelete: 'CASCADE'
 });
 
 //Martian has MANY Visitor
@@ -22,7 +23,8 @@ Martian.hasMany(Visitor, {
 
 //Visitor belongs to ONE Martian
 Visitor.belongsTo(Martian, {
-    foreignKey: 'host_id'
+    foreignKey: 'host_id',
+    onDelete: 'CASCADE'
 });
 
 //Base belongs to MANY Supply
@@ -36,3 +38,11 @@ Supply.belongsToMany(Base, {
     through: Inventory,
     foreignKey: 'supply_id'
 });
+
+module.exports = {
+    Martian,
+    Base,
+    Supply,
+    Inventory,
+    Visitor
+}

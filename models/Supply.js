@@ -6,7 +6,7 @@ class Supply extends Model {}
 Supply.init(
     {
         supply_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },

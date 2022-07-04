@@ -6,7 +6,7 @@ class Base extends Model {}
 Base.init(
     {
         base_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -14,7 +14,7 @@ Base.init(
             type: DataTypes.STRING
         },
         founded: {
-            type: DataTypes.DATE
+            type: DataTypes.DATEONLY
         }
     },
     {

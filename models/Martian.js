@@ -6,7 +6,7 @@ class Martian extends Model {}
 Martian.init(
     {
         martian_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -17,7 +17,11 @@ Martian.init(
             type: DataTypes.STRING
         },
         base_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'base',
+                key: 'base_id'
+            }
         },
         super_id: {
             type: DataTypes.INTEGER,

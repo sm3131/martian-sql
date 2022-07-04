@@ -6,7 +6,7 @@ class Visitor extends Model {}
 Visitor.init(
     {
         visitor_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
